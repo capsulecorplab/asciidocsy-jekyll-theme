@@ -1,6 +1,12 @@
-*.gem
-.bundle
+# Jekyll
+_site
+_scraps
 .jekyll-cache
 .sass-cache
-_site
-Gemfile.lock
+.jekyll-cache
+.jekyll-metadata
+vendor
+_algolia_api_key
+
+# GitHub Actions
+gh-pages*
