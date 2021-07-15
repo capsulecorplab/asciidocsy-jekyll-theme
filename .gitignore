@@ -1,3 +1,4 @@
+# Jekyll
 _site
 _scraps
 .jekyll-cache
@@ -6,3 +7,6 @@ _scraps
 .jekyll-metadata
 vendor
 _algolia_api_key
+
+# GitHub Actions
+gh-pages*
