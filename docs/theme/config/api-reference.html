@@ -1,0 +1,3698 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <!-- Copyright 2019-2021 Vanessa Sochat-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+<meta charset="utf-8">
+<!-- Some HTML templates copyright 2019-2021 Vanessa Sochat | Apache 2.0 License -->
+<!-- Adapted and re-released as AsciiDocsy under Apache 2.0 and MIT licenses
+ in 2021 by Codewriting LLC -->
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Jekyll+Asciidoctor" />
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://asciidocsy.netlify.app/docs/theme/config/api-reference" />
+<link rel="shortcut icon" href="/images/favicons/favicon.ico" >
+<link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+<!--
+<link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/images/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/images/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/images/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/images/favicons/android-96x196.png" sizes="96x196">
+<link rel="icon" type="image/png" href="/images/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/images/favicons/android-192x192.png" sizes="192x192">
+-->
+
+<title>
+  
+    Theme Configuration API |
+  
+  AsciiDocsy
+</title>
+
+<meta property="og:title" content="Theme Configuration API" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="" />
+<meta property="og:site_name" content="" />
+
+<meta itemprop="name" content="Theme Configuration API">
+<meta itemprop="description" content="">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/bootstrap-4.3.css"/>
+<link rel="stylesheet" href="/css/bootstrap-toc.css"/>
+<link rel="stylesheet" href="/css/jquery.navgoco.css"/>
+<link rel="stylesheet" href="/css/palette.css"/>
+<link rel="stylesheet" href="/css/asciidoctor.css"/>
+<link rel="stylesheet" href="/css/font-awesome.css"/>
+<link rel="stylesheet" href="/css/skins/foundation.css" id="theme-skin"/>
+<link rel="stylesheet" href="/css/syntax/hljs/a11y-light.css" id="syntax-skin"/>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous"/>
+<link rel="stylesheet" href="/css/asciidocsy.css"/>
+<link rel="stylesheet" href="/css/custom.css"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/jquery-3.3.1.min.js" integrity="" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.cookie.js" integrity="" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js" integrity="" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js" integrity="" crossorigin="anonymous"></script>
+
+<script src="/js/anchor.min.js" integrity="" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.navgoco.js" integrity="" crossorigin="anonymous"></script>
+
+<script src="/js/bootstrap-toc.js" integrity="" crossorigin="anonymous"></script>
+
+<script src="/js/highlight.pack.js" integrity="" crossorigin="anonymous"></script>
+
+<script src="/js/asciidoctor.min.js" integrity="" crossorigin="anonymous"></script>
+
+<script src="/js/tabber.js" integrity="" crossorigin="anonymous"></script>
+
+<script src="/js/toggler.js" integrity="" crossorigin="anonymous"></script>
+
+<script src="/js/semantics.js" integrity="" crossorigin="anonymous"></script>
+
+
+<script>
+// invoke highligher.js
+hljs.highlightAll();
+</script>
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+<body data-spy="scroll" data-target="#toc-side">
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+<header><!-- DOCSITE REF/NAV -->
+  <nav id="nav-site" class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+    <a class="navbar-brand" href="/">
+      <span class="navbar-logo"></span>
+      <img src="" class="logo" width="50px">
+       <span class="site-title">AsciiDocsy</span>
+	  </a>
+  	<div class="td-navbar-nav-scroll ml-md-auto align-content-end" id="navbarNavDropdown">
+      
+
+
+
+
+
+
+<!-- nav menu  -->
+<ul class="navbar-nav mt-2 mt-lg-0">
+
+  
+  
+  
+  
+  <li class="nav-item mr-4 mb-2 mb-lg-0 dropdown">
+    <a class="nav-link dropdown-toggle active" href="/docs" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Documentation</a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    
+      <a class="dropdown-item" href="/docs/theme">
+        Theme Docs & Guides
+      </a>
+    
+      <a class="dropdown-item" href="/docs/style">
+        Docs-as-Code Style Guides
+      </a>
+    
+    </div>
+  </li>
+  
+  
+
+  
+  
+  
+  
+  <li class="nav-item mr-4 mb-2 mb-lg-0 dropdown">
+    <a class="nav-link dropdown-toggle " href="/about" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      About</a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    
+      <a class="dropdown-item" href="/about#background">
+        Theme Background
+      </a>
+    
+      <a class="dropdown-item" href="https://github.com/docops">
+        Doc Ops
+      </a>
+    
+    </div>
+  </li>
+  
+  
+
+  
+  
+  
+  
+  <li class="nav-item mr-4 mb-2 mb-lg-0">
+    <a class="nav-link " href="/releases">Releases</a>
+  </li>
+  
+  
+
+</ul>
+
+
+  	</div>
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+var hrefChanged = false;
+</script>
+<div class="aa-input-container" id="aa-input-container">
+  <span class="algolia-autocomplete">
+    <input id="search-site" type="search" class="aa-input-search aa-hint" autocomplete="off" readonly="" aria-hidden="true" spellcheck="false" tabindex="-1"/>
+    <input type="search" id="aa-search-site-input" class="aa-input-search aa-input" placeholder="Search non-docs PAGES…" name="search" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="both" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto"/>
+    <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, Arial, &quot;sans serif&quot;; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"/>
+    </pre>
+    <span class="aa-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0"/>
+      <div class="aa-dataset-1"></div>
+    </span>
+  </span>
+  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
+    <path d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z"></path>
+  </svg>
+</div>
+<!-- Initialize autocomplete menu -->
+<script>
+$( "#aa-site-input" ).keydown(function(e) {
+  e = e || window.event;
+  if (!hrefChanged && (e.keyCode || e.which) == 13) {
+    // Enter key pressed
+    window.location.href = "/docs/search.html?q=" + $( "#aa-search-site-input" ).val().replace(' ', '+');
+  }
+});
+
+var client = algoliasearch('SELDDHION6', 'b9112b0485d58729c3e7c7b64291cbd9');
+var index = client.initIndex('asciidocsy-pages');
+// Initialize autocomplete on search input (ID selector must match).
+autocomplete('#aa-search-site-input',
+{ hint: true, autoselect: false }, {
+    source: autocomplete.sources.hits(index, {hitsPerPage: 5, typoTolerance: 'false', advancedSyntax: 'true'}),
+    // Value to be displayed in input control after user's suggestion selection.
+    displayKey: function(suggestion) {
+      var titleValue;
+      if (suggestion.title) {
+        titleValue = suggestion.title;
+      } else {
+        var idx = suggestion.slug.lastIndexOf("_");
+        titleValue = suggestion.slug.substring(idx + 1).replace(/-/g, " ");
+        titleValue = titleValue.charAt(0).toUpperCase() + titleValue.slice(1);
+      }
+
+      return titleValue;
+    },
+    // Hash of templates used when rendering dataset.
+    templates: {
+      empty: function(suggestion) {
+        // Add the see more results option when no suggestion is found...
+        // just in case the user prefers to search in the main search page.
+        var hrefValue = "/search?q=" + document.getElementById('aa-search-site-input').value.replace(' ', '+');
+        return '<div class="aa-suggestion" role="option"><a id="show-more-link" class="suggestion-link" href="' + hrefValue + '">See more results...</a></div>';
+      },
+      footer: function(suggestion) {
+        // If no result is returned, don't add the show more results option
+        // cause it is added in the empty callback.
+        if (suggestion.isEmpty){
+          return;
+        }
+        var hrefValue = "/search?q=" + document.getElementById('aa-search-site-input').value.replace(' ', '+');
+        return '<div class="aa-suggestion" role="option"><a id="show-more-link" class="suggestion-link" href="' + hrefValue + '">See more results...</a></div>';
+      },
+      // 'suggestion' templating function used to render a single suggestion.
+      suggestion: function(suggestion) {
+        // Only preview the first 200 characters of the page.
+        var contentValue = "";
+        if (suggestion._highlightResult.content) {
+          contentValue = suggestion._highlightResult.content.value
+          if (suggestion._highlightResult.content.value.length > 200) {
+            contentValue = suggestion._highlightResult.content.value.slice(0, 200) + '...'
+          }
+        }
+
+        // Add a title based on the link to the pages that don't have
+        // a title. The title will get the link's last underscore and
+        // then get the following words... usually that is the name of the page.
+        var titleValue;
+        if (suggestion.title) {
+          titleValue = suggestion.title;
+        } else {
+          var idx = suggestion.slug.lastIndexOf("_");
+          titleValue = suggestion.slug.substring(idx + 1).replace(/-/g, " ");
+          titleValue = titleValue.charAt(0).toUpperCase() + titleValue.slice(1);
+        }
+
+        // Define target link.
+        var linkValue = window.location.href.substring(0, window.location.href.indexOf('') - 1) + suggestion.url;
+
+        return '<a class="suggestion-link" href="' + linkValue + '"><span>' + titleValue + '</span><span>' +
+          contentValue + '</span></a>';
+      }
+    }
+}).on('autocomplete:selected', function(event, suggestion, dataset) {
+  if (event._args.length > 0) {
+    var linkValue;
+    if (suggestion) {
+      linkValue = window.location.href.substring(0, window.location.href.indexOf('') - 1) + suggestion.url;
+    } else {
+      // Show more results.
+      linkValue = "search.html?q=" + document.getElementById('aa-search-site-input').value.replace(' ', '+');
+    }
+    window.location.href = linkValue;
+    hrefChanged = true;
+  }
+});
+</script>
+
+
+    
+    
+  	<div class="navbar-nav d-none d-lg-block">
+      <a class="nav-link" href="https://github.com/DocOps/asciidocsy-jekyll-theme" target="_blank">
+        <i class="icon fab fa fa-github fa-2x"></i>
+      </a>
+    </div>
+    
+  </nav>
+</header>
+
+
+  
+
+
+
+
+
+  <div class="container-fluid td-outer reference">
+    <div class="td-main">
+      <div class="row flex-xl-nowrap">
+
+        <div id="sidebar-left" class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"><!-- SUBJECT/PRODUCT REF/NAV -->
+          <div class="sticky-top sticky-offset">
+            <div class="sidebar-top">
+            
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+  
+  
+
+  
+  
+
+
+
+  
+             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+var hrefChanged = false;
+</script>
+<div class="aa-input-container" id="aa-input-container">
+  <span class="algolia-autocomplete">
+    <input id="subject-search" type="search" class="aa-input-search aa-hint" autocomplete="off" readonly="" aria-hidden="true" spellcheck="false" tabindex="-1"/>
+    <input type="search" id="aa-subject-search-input" class="aa-input-search aa-input" placeholder="Search subject TOPICS…" name="search" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="both" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto"/>
+    <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, Arial, &quot;sans serif&quot;; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"/>
+    </pre>
+    <span class="aa-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0"/>
+      <div class="aa-dataset-1"></div>
+    </span>
+  </span>
+  <svg class="aa-input-icon" viewBox="654 -372 1664 1664">
+    <path d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z"></path>
+  </svg>
+</div>
+<!-- Initialize autocomplete menu -->
+<script>
+$( "#aa-subject-input" ).keydown(function(e) {
+  e = e || window.event;
+  if (!hrefChanged && (e.keyCode || e.which) == 13) {
+    // Enter key pressed
+    window.location.href = "/docs/search.html?q=" + $( "#aa-subject-search-input" ).val().replace(' ', '+');
+  }
+});
+
+var client = algoliasearch('SELDDHION6', 'b9112b0485d58729c3e7c7b64291cbd9');
+var index = client.initIndex('asciidocsy-topics');
+// Initialize autocomplete on search input (ID selector must match).
+autocomplete('#aa-subject-search-input',
+{ hint: true, autoselect: false }, {
+    source: autocomplete.sources.hits(index, {hitsPerPage: 5, typoTolerance: 'false', advancedSyntax: 'true'}),
+    // Value to be displayed in input control after user's suggestion selection.
+    displayKey: function(suggestion) {
+      var titleValue;
+      if (suggestion.title) {
+        titleValue = suggestion.title;
+      } else {
+        var idx = suggestion.slug.lastIndexOf("_");
+        titleValue = suggestion.slug.substring(idx + 1).replace(/-/g, " ");
+        titleValue = titleValue.charAt(0).toUpperCase() + titleValue.slice(1);
+      }
+
+      return titleValue;
+    },
+    // Hash of templates used when rendering dataset.
+    templates: {
+      empty: function(suggestion) {
+        // Add the see more results option when no suggestion is found...
+        // just in case the user prefers to search in the main search page.
+        var hrefValue = "/search?q=" + document.getElementById('aa-subject-search-input').value.replace(' ', '+');
+        return '<div class="aa-suggestion" role="option"><a id="show-more-link" class="suggestion-link" href="' + hrefValue + '">See more results...</a></div>';
+      },
+      footer: function(suggestion) {
+        // If no result is returned, don't add the show more results option
+        // cause it is added in the empty callback.
+        if (suggestion.isEmpty){
+          return;
+        }
+        var hrefValue = "/search?q=" + document.getElementById('aa-subject-search-input').value.replace(' ', '+');
+        return '<div class="aa-suggestion" role="option"><a id="show-more-link" class="suggestion-link" href="' + hrefValue + '">See more results...</a></div>';
+      },
+      // 'suggestion' templating function used to render a single suggestion.
+      suggestion: function(suggestion) {
+        // Only preview the first 200 characters of the page.
+        var contentValue = "";
+        if (suggestion._highlightResult.content) {
+          contentValue = suggestion._highlightResult.content.value
+          if (suggestion._highlightResult.content.value.length > 200) {
+            contentValue = suggestion._highlightResult.content.value.slice(0, 200) + '...'
+          }
+        }
+
+        // Add a title based on the link to the pages that don't have
+        // a title. The title will get the link's last underscore and
+        // then get the following words... usually that is the name of the page.
+        var titleValue;
+        if (suggestion.title) {
+          titleValue = suggestion.title;
+        } else {
+          var idx = suggestion.slug.lastIndexOf("_");
+          titleValue = suggestion.slug.substring(idx + 1).replace(/-/g, " ");
+          titleValue = titleValue.charAt(0).toUpperCase() + titleValue.slice(1);
+        }
+
+        // Define target link.
+        var linkValue = window.location.href.substring(0, window.location.href.indexOf('') - 1) + suggestion.url;
+
+        return '<a class="suggestion-link" href="' + linkValue + '"><span>' + titleValue + '</span><span>' +
+          contentValue + '</span></a>';
+      }
+    }
+}).on('autocomplete:selected', function(event, suggestion, dataset) {
+  if (event._args.length > 0) {
+    var linkValue;
+    if (suggestion) {
+      linkValue = window.location.href.substring(0, window.location.href.indexOf('') - 1) + suggestion.url;
+    } else {
+      // Show more results.
+      linkValue = "search.html?q=" + document.getElementById('aa-subject-search-input').value.replace(' ', '+');
+    }
+    window.location.href = linkValue;
+    hrefChanged = true;
+  }
+});
+</script>
+
+
+  
+            </div>
+            <div class="sidebar-mid">
+            
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+              
+
+
+
+
+
+
+<!--  NAVGOCO menu component -->
+<ul id="subject-menu" class="nav flex-column">
+  
+		
+
+
+
+
+
+
+
+
+
+
+    <li class="nav-item open card tier-1 proud-ancestor ">
+    <a href="/docs/theme" class=" open">
+    AsciiDocsy Theme Docs
+    </a>
+		<!-- tag::sample-nesting[] -->
+    
+      <ul>
+      
+			  
+
+
+
+
+
+
+
+
+
+
+        <li class="nav-item tier-2  parent ">
+          <a href="/docs/theme/setup" class="nav-link  ">
+						Getting Started
+					</a>
+          
+          <ul>
+            
+						  
+
+
+
+
+
+
+
+
+
+
+            <li class="nav-item tier-3   ">
+              <a href="/docs/theme/setup/environment" class="nav-link ">Writing/Dev Environment</a>
+              
+            </li>
+            
+						  
+
+
+
+
+
+
+
+
+
+
+            <li class="nav-item tier-3   ">
+              <a href="/docs/theme/setup/quickstart" class="nav-link ">Quickstart (Install & Build)</a>
+              
+            </li>
+            
+						  
+
+
+
+
+
+
+
+
+
+
+            <li class="nav-item tier-3   ">
+              <a href="/docs/theme/setup/bootstrap" class="nav-link ">Bootstrapping AsciiDocsy</a>
+              
+            </li>
+            
+          </ul>
+          
+        </li>
+      
+			  
+
+
+
+
+
+
+
+
+
+
+        <li class="nav-item tier-2   ">
+          <a href="/docs/theme/features/frontend" class="nav-link  ">
+						Frontend Features Overview
+					</a>
+          
+        </li>
+      
+			  
+
+
+
+
+
+
+
+
+
+
+        <li class="nav-item tier-2 open proud-ancestor ">
+          <a href="/docs/theme/config" class="nav-link  open">
+						Customize the Theme
+					</a>
+          
+          <ul>
+            
+						  
+
+
+
+
+
+
+
+
+
+
+            <li class="nav-item tier-3 open  active">
+              <a href="/docs/theme/config/api-reference" class="nav-link active">Config API Reference</a>
+              
+            </li>
+            
+						  
+
+
+
+
+
+
+
+
+
+
+            <li class="nav-item tier-3  parent ">
+              <a href="/docs/theme/config/search" class="nav-link ">Configure Search</a>
+              
+                <ul>
+                  
+                    
+
+
+
+
+
+
+
+
+
+
+                  <li class="nav-item tier-4   ">
+                    <a href="/docs/theme/config/search/algolia" class="nav-link ">Algolia Search</a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+            
+						  
+
+
+
+
+
+
+
+
+
+
+            <li class="nav-item tier-3  parent ">
+              <a href="/docs/theme/config/versioning" class="nav-link ">Version Handlers</a>
+              
+                <ul>
+                  
+                    
+
+
+
+
+
+
+
+
+
+
+                  <li class="nav-item tier-4   ">
+                    <a href="/docs/theme/config/versioning/tabsets" class="nav-link ">Pane Tabs</a>
+                  </li>
+                  
+                    
+
+
+
+
+
+
+
+
+
+
+                  <li class="nav-item tier-4   ">
+                    <a href="/docs/theme/config/versioning/toggles" class="nav-link ">Class Toggles</a>
+                  </li>
+                  
+                    
+
+
+
+
+
+
+
+
+
+
+                  <li class="nav-item tier-4   ">
+                    <a href="/docs/theme/config/versioning/swaps" class="nav-link ">Token Swaps</a>
+                  </li>
+                  
+                    
+
+
+
+
+
+
+
+
+
+
+                  <li class="nav-item tier-4   ">
+                    <a href="/docs/theme/config/versioning/amenders" class="nav-link ">DOM Amenders</a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+            
+						  
+
+
+
+
+
+
+
+
+
+
+            <li class="nav-item tier-3   ">
+              <a href="/docs/theme/config/semantics" class="nav-link ">Customize Semantics</a>
+              
+            </li>
+            
+          </ul>
+          
+        </li>
+      
+			  
+
+
+
+
+
+
+
+
+
+
+        <li class="nav-item tier-2   ">
+          <a href="/docs/theme/extend" class="nav-link  ">
+						Extend the Theme
+					</a>
+          
+        </li>
+      
+			  
+
+
+
+
+
+
+
+
+
+
+        <li class="nav-item tier-2   ">
+          <a href="/docs/theme/advanced" class="nav-link  ">
+						Advanced Applications
+					</a>
+          
+        </li>
+      
+      </ul>
+    
+		<!-- end::sample-nesting[] -->
+    </li>
+    
+    
+  
+		
+
+
+
+
+
+
+
+
+
+
+    <li class="nav-item open card tier-1 parent ">
+    <a href="/docs/style" class=" ">
+    Docs-as-Code Style Guides
+    </a>
+		<!-- tag::sample-nesting[] -->
+    
+      <ul>
+      
+			  
+
+
+
+
+
+
+
+
+
+
+        <li class="nav-item tier-2  parent ">
+          <a href="/docs/style/asciidoc" class="nav-link  ">
+						AsciiDoc
+					</a>
+          
+          <ul>
+            
+						  
+
+
+
+
+
+
+
+
+
+
+            <li class="nav-item tier-3   ">
+              <a href="/docs/style/asciidoc/semantics" class="nav-link ">Inline Semantics</a>
+              
+            </li>
+            
+          </ul>
+          
+        </li>
+      
+			  
+
+
+
+
+
+
+
+
+
+
+        <li class="nav-item tier-2   ">
+          <a href="/docs/style/yaml" class="nav-link  ">
+						YAML
+					</a>
+          
+        </li>
+      
+			  
+
+
+
+
+
+
+
+
+
+
+        <li class="nav-item tier-2   ">
+          <a href="/docs/style/liquid" class="nav-link  ">
+						Liquid
+					</a>
+          
+        </li>
+      
+      </ul>
+    
+		<!-- end::sample-nesting[] -->
+    </li>
+    
+    
+  
+</ul>
+
+
+            </div>
+            <div class="sidebar-end">
+              
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+            </div>
+          </div><!-- /.sticky-top -->
+        </div><!-- /#sidebar-left -->
+
+        <main id="main" class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <div class="td-content">
+            <!--  -->
+
+
+
+
+
+
+
+
+
+<div id="breadcrumbs">
+<a href="/">Home</a>
+
+  
+    
+    
+    / <a href="/docs/">Documentation</a>
+  
+
+  
+    
+    
+    / <a href="/docs/theme/">AsciiDocsy Theme</a>
+  
+
+  
+    
+    
+    / <a href="/docs/theme/config/">Configuration</a>
+  
+
+  
+    / Theme Configuration API
+  
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+  
+  
+
+  
+  
+
+
+
+<h1>Theme Configuration API</h1>
+<div class="container topic-reference api-reference">
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This reference is highly experimental.
+I&#8217;ve only spent about 2 hours coding this as an example of a novel domain-specific language (DSL) reference parsed from YAML by Liquid into AsciiDoc for rendering as HTML (or PDF, etc).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Consider this to be rudimentary documentation generated from data structures found in <code><em>config.yml</code>.
+This would be better generated from a _schema</em>-like version of these data objects, referencing them with metadata about each block of properties in each feature object.
+Instead, we are using the objects directly, supplemented by an optional <code>$docs</code> objects embedded in the config data structure.</p>
+</div>
+<div class="paragraph">
+<p>Also, due to object nesting, lots more recursive processing needs to happen.
+The truth is, a simple configuration file that can be commented inline and must be edited in place is not great fodder for an API reference, but I wanted to demonstrate it.</p>
+</div>
+<div class="paragraph">
+<p>But do look at the AsciiDoc and YAML sources (see links to the right <span class="icon"><i class="fa fa-right-arrow"></i></span>) for this page if you need inspiration for your own complex content.</p>
+</div>
+</div>
+</div>
+<div class="sect1 api-reference">
+<h2 id="scripts">SCRIPTS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code class="big">site.data.theme.scripts</code></p>
+</div>
+<div class="paragraph">
+<p>Defines references to JavaScript resources.</p>
+</div>
+<div class="sect2">
+<h3 id="head">Head</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.scripts.head</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tail">Tail</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.scripts.tail</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="extend">EXTEND</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code class="big">site.data.theme.extend</code></p>
+</div>
+<div class="paragraph">
+<p>Listing of extension hooks, as described in <a href="#/docs/theme/extend">Extend the Theme</a></p>
+</div>
+<div class="sect2">
+<h3 id="hooks">Hooks</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.extend.hooks</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="blocks">BLOCKS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code class="big">site.data.theme.blocks</code></p>
+</div>
+<div class="paragraph">
+<p>Placement and design of various layout elements.</p>
+</div>
+<div class="sect2">
+<h3 id="page-header">Page-header</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.blocks.page-header</code></p>
+</div>
+<div class="paragraph">
+<p>Settings for the <code>header</code> area of the layout</p>
+</div>
+<h4 id="properties" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-blocks-page-header-show-logo-source" class="discrete"><code>site.data.theme.blocks.page-header.show.logo.source</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+usage
+</td>
+<td class="hdlist2">
+<p>Path of header logo image file</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+type
+</td>
+<td class="hdlist2">
+<p>String</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>/images/logo.png</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-blocks-page-header-show-logo-width" class="discrete"><code>site.data.theme.blocks.page-header.show.logo.width</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+usage
+</td>
+<td class="hdlist2">
+<p>Width of the header logo image</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+type
+</td>
+<td class="hdlist2">
+<p>String</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>50px</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="page-footer">Page-footer</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.blocks.page-footer</code></p>
+</div>
+<div class="paragraph">
+<p>Settings for the <code>footer</code> area of the layout</p>
+</div>
+<h4 id="properties-2" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-blocks-page-footer-show-logo-source" class="discrete"><code>site.data.theme.blocks.page-footer.show.logo.source</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+usage
+</td>
+<td class="hdlist2">
+<p>Path of footer logo image file</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+type
+</td>
+<td class="hdlist2">
+<p>String</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>/images/docops-labs-logo.png</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-blocks-page-footer-show-logo-width" class="discrete"><code>site.data.theme.blocks.page-footer.show.logo.width</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+usage
+</td>
+<td class="hdlist2">
+<p>Width of the footer logo image</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+type
+</td>
+<td class="hdlist2">
+<p>String</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>150px</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-blocks-page-footer-opts-first-col-class" class="discrete"><code>site.data.theme.blocks.page-footer.opts.first-col-class</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+usage
+</td>
+<td class="hdlist2">
+<p>The class of the first column in the footer</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+type
+</td>
+<td class="hdlist2">
+<p>String</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="social-links">Social-links</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.blocks.social-links</code></p>
+</div>
+<div class="paragraph">
+<p>Settings for social links.</p>
+</div>
+<h4 id="properties-3" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-blocks-social-links-show-spot" class="discrete"><code>site.data.theme.blocks.social-links.show.spot</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>footer</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="styles">STYLES</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code class="big">site.data.theme.styles</code></p>
+</div>
+<div class="paragraph">
+<p>Custom styles for elements of the theme</p>
+</div>
+<div class="sect2">
+<h3 id="logo">Logo</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.styles.logo</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="color">Color</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.styles.color</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="strings">STRINGS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code class="big">site.data.theme.strings</code></p>
+</div>
+<div class="paragraph">
+<p>Theme strings organized by container block/element.
+Documentation in source file only.</p>
+</div>
+<div class="sect2">
+<h3 id="footer">Footer</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.strings.footer</code></p>
+</div>
+<div class="paragraph">
+<p>Strings for the footer of the document.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="see-also">See-also</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.strings.see-also</code></p>
+</div>
+<div class="paragraph">
+<p>Strings for the see-also segment</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="page-actions-topic">PAGE ACTIONS: TOPIC</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code class="big">site.data.theme.page-actions.topic</code></p>
+</div>
+<div class="sect2">
+<h3 id="peel">Peel</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.page-actions.topic.peel</code></p>
+</div>
+<div class="paragraph">
+<p>Make the page print-friendly by removing the sidebars.</p>
+</div>
+<h4 id="properties-4" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-page-actions-topic-peel-text" class="discrete"><code>site.data.theme.page-actions.topic.peel.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Print-friendly</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-page-actions-topic-peel-icon" class="discrete"><code>site.data.theme.page-actions.topic.peel.icon</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>fa fa-newspaper-o</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-page-actions-topic-peel-func" class="discrete"><code>site.data.theme.page-actions.topic.peel.func</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p>``</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="edit">Edit</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.page-actions.topic.edit</code></p>
+</div>
+<div class="paragraph">
+<p>Link to edit this topic in Git.</p>
+</div>
+<h4 id="properties-5" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-page-actions-topic-edit-text" class="discrete"><code>site.data.theme.page-actions.topic.edit.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Edit this topic</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-page-actions-topic-edit-icon" class="discrete"><code>site.data.theme.page-actions.topic.edit.icon</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>fa fa-pencil-square</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="data">Data</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.page-actions.topic.data</code></p>
+</div>
+<div class="paragraph">
+<p>Link to edit this topic datasource in Git.</p>
+</div>
+<h4 id="properties-6" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-page-actions-topic-data-text" class="discrete"><code>site.data.theme.page-actions.topic.data.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Edit topic datasource</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-page-actions-topic-data-icon" class="discrete"><code>site.data.theme.page-actions.topic.data.icon</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>fa fa-database</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="make">Make</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.page-actions.topic.make</code></p>
+</div>
+<div class="paragraph">
+<p>Link to make a new topic in Git.</p>
+</div>
+<h4 id="properties-7" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-page-actions-topic-make-text" class="discrete"><code>site.data.theme.page-actions.topic.make.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Create a (sub)topic</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-page-actions-topic-make-icon" class="discrete"><code>site.data.theme.page-actions.topic.make.icon</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>fa fa-file-text-o</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="open-docs-ticket">Open Docs Ticket</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.page-actions.topic.open-docs</code></p>
+</div>
+<div class="paragraph">
+<p>Link to making a docs ticket.</p>
+</div>
+<h4 id="properties-8" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-page-actions-topic-open-docs-text" class="discrete"><code>site.data.theme.page-actions.topic.open-docs.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Open a docs ticket.</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-page-actions-topic-open-docs-icon" class="discrete"><code>site.data.theme.page-actions.topic.open-docs.icon</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>fa fa-ticket</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-page-actions-topic-open-docs-path" class="discrete"><code>site.data.theme.page-actions.topic.open-docs.path</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>/new?labels=documentation</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="open-subject-ticket">Open Subject Ticket</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.page-actions.topic.open-subj</code></p>
+</div>
+<div class="paragraph">
+<p>Link to making a subject (product) ticket.</p>
+</div>
+<h4 id="properties-9" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-page-actions-topic-open-subj-text" class="discrete"><code>site.data.theme.page-actions.topic.open-subj.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Open a product ticket.</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-page-actions-topic-open-subj-icon" class="discrete"><code>site.data.theme.page-actions.topic.open-subj.icon</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>fa fa-tag</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-page-actions-topic-open-subj-path" class="discrete"><code>site.data.theme.page-actions.topic.open-subj.path</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>/new</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="page-actions-page">PAGE ACTIONS: PAGE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code class="big">site.data.theme.page-actions.page</code></p>
+</div>
+<div class="sect2">
+<h3 id="edit-2">Edit</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.page-actions.page.edit</code></p>
+</div>
+<div class="paragraph">
+<p>Link to edit this page.</p>
+</div>
+<h4 id="properties-10" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-page-actions-page-edit-text" class="discrete"><code>site.data.theme.page-actions.page.edit.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Edit this page in Git.</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-page-actions-page-edit-icon" class="discrete"><code>site.data.theme.page-actions.page.edit.icon</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>fa fa-pencil</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="data-2">Data</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.page-actions.page.data</code></p>
+</div>
+<div class="paragraph">
+<p>Link to edit this page&#8217;s datasource.</p>
+</div>
+<h4 id="properties-11" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-page-actions-page-data-text" class="discrete"><code>site.data.theme.page-actions.page.data.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Edit page datasource in Git.</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-page-actions-page-data-icon" class="discrete"><code>site.data.theme.page-actions.page.data.icon</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>fa fa-database</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="make-2">Make</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.page-actions.page.make</code></p>
+</div>
+<div class="paragraph">
+<p>Create a new page in Git.</p>
+</div>
+<h4 id="properties-12" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-page-actions-page-make-text" class="discrete"><code>site.data.theme.page-actions.page.make.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Suggest a new page</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-page-actions-page-make-icon" class="discrete"><code>site.data.theme.page-actions.page.make.icon</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>fa fa-file-text-o</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="policies">POLICIES</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code class="big">site.data.theme.policies</code></p>
+</div>
+<div class="paragraph">
+<p>Defines policies regarding privacy, content display, access, etc.</p>
+</div>
+<div class="sect2">
+<h3 id="gdpr-policies">GDPR Policies</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.policies.gdpr</code></p>
+</div>
+<div class="paragraph">
+<p>Groups cookies by use to let users select which cookies to permit.</p>
+</div>
+<h4 id="properties-13" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-policies-gdpr-types" class="discrete"><code>site.data.theme.policies.gdpr.types</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+usage
+</td>
+<td class="hdlist2">
+<p>The categories of cookies users can toggle on/off.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<code>slug</code>
+</td>
+<td class="hdlist2">
+<p>Slug for the category.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<code>text</code>
+</td>
+<td class="hdlist2">
+<p>User-facing descriptor for the category.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<code>cookies</code>
+</td>
+<td class="hdlist2">
+<p>Array of cookie names in the category.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>{"slug"&#8658;"essential", "text"&#8658;"Just the cookie to remember these preferences.", "cookies"&#8658;["cookieControlPrefs"]}{"slug"&#8658;"preferences", "text"&#8658;"Cookies to recall style and version choices made in the app.", "cookies"&#8658;["syntax-style", "skin-style", "switcher_user-os"]}{"slug"&#8658;"analytics", "text"&#8658;"Uses cookies to anonymously report how you use the site so we can improve the experience.", "cookies"&#8658;["google-analytics"]}{"slug"&#8658;"commercial", "text"&#8658;"We don&#8217;t use this kind of cookie anywhere on our site.", "cookies"&#8658;[]}</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="authorizations">Authorizations</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.policies.authorizations</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="defaults">Defaults</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.policies.defaults</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="semantics">SEMANTICS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code class="big">site.data.theme.semantics</code></p>
+</div>
+<div class="paragraph">
+<p>Defines inline and block-level semantic elements</p>
+</div>
+<div class="sect2">
+<h3 id="inline">Inline</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.semantics.inline</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="blocks-2">Blocks</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.semantics.blocks</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="search">SEARCH</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code class="big">site.data.theme.search</code></p>
+</div>
+<div class="paragraph">
+<p>Defines the fields/results for search forms</p>
+</div>
+<div class="sect2">
+<h3 id="search-the-site">Search the site</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.search.site</code></p>
+</div>
+<div class="paragraph">
+<p>Enables users to search all pages in the site, including non-topics</p>
+</div>
+<h4 id="properties-14" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-search-site-show-text" class="discrete"><code>site.data.theme.search.site.show.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Search non-docs PAGES…</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-search-site-show-icon" class="discrete"><code>site.data.theme.search.site.show.icon</code></h5>
+<h5 id="site-data-theme-search-site-show-spot" class="discrete"><code>site.data.theme.search.site.show.spot</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>#nav-site</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-search-site-show-meta-index" class="discrete"><code>site.data.theme.search.site.show.meta.index</code></h5>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="search-current-subject">Search current subject</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.search.subject</code></p>
+</div>
+<div class="paragraph">
+<p>Enables users to search all topics in a subject</p>
+</div>
+<h4 id="properties-15" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-search-subject-show-text" class="discrete"><code>site.data.theme.search.subject.show.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Search subject TOPICS…</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-search-subject-show-icon" class="discrete"><code>site.data.theme.search.subject.show.icon</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>fa fa-search</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-search-subject-show-spot" class="discrete"><code>site.data.theme.search.subject.show.spot</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>#sidebar-left</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="navigation">NAVIGATION</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code class="big">site.data.theme.navigation</code></p>
+</div>
+<div class="paragraph">
+<p>All navigation elements are defined here.</p>
+</div>
+<div class="sect2">
+<h3 id="anchor-links">Anchor Links</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.navigation.anchor-links</code></p>
+</div>
+<div class="paragraph">
+<p>Adds self-referential links to all headers of the listed types.</p>
+</div>
+<h4 id="properties-16" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-navigation-anchor-links-show-list" class="discrete"><code>site.data.theme.navigation.anchor-links.show.list</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+usage
+</td>
+<td class="hdlist2">
+<p>Comma-delimited list of heading elements to bookmark</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+type
+</td>
+<td class="hdlist2">
+<p>String</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>h2,h3,h4,h5</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="subject-menu">Subject Menu</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.navigation.subject-menu</code></p>
+</div>
+<div class="paragraph">
+<p>Determines the source and display of the <em>subject</em> navigation menu.</p>
+</div>
+<h4 id="properties-17" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-navigation-subject-menu-opts-show-type-icons" class="discrete"><code>site.data.theme.navigation.subject-menu.opts.show.type.icons</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+type
+</td>
+<td class="hdlist2">
+<p>String</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="table-of-contents">Table of Contents</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.navigation.toc</code></p>
+</div>
+<div class="paragraph">
+<p>Shows and sets the depth of the table of contents for a topic/page.</p>
+</div>
+<h4 id="properties-18" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-navigation-toc-show-text" class="discrete"><code>site.data.theme.navigation.toc.show.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>In this topic…</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-navigation-toc-show-spot" class="discrete"><code>site.data.theme.navigation.toc.show.spot</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>#sidebar-right</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-navigation-toc-show-opts-header-level-depth" class="discrete"><code>site.data.theme.navigation.toc.show.opts.header-level-depth</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>h3</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="page-breadcrumbs">Page Breadcrumbs</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.navigation.breadcrumbs</code></p>
+</div>
+<div class="paragraph">
+<p>Displays and designs the breadcrumb trail.</p>
+</div>
+<h4 id="properties-19" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-navigation-breadcrumbs-show-home" class="discrete"><code>site.data.theme.navigation.breadcrumbs.show.home</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+usage
+</td>
+<td class="hdlist2">
+<p>The label for the base crumb</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+type
+</td>
+<td class="hdlist2">
+<p>String</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Home</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-navigation-breadcrumbs-show-opts-delim" class="discrete"><code>site.data.theme.navigation.breadcrumbs.show.opts.delim</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+usage
+</td>
+<td class="hdlist2">
+<p>Character(s) to insert between crumbs</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+type
+</td>
+<td class="hdlist2">
+<p>String</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>&gt;</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="forms">FORMS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code class="big">site.data.theme.forms</code></p>
+</div>
+<div class="paragraph">
+<p>Ad-hoc forms for the theme.</p>
+</div>
+<div class="sect2">
+<h3 id="feedback-form">Feedback-form</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.forms.feedback-form</code></p>
+</div>
+<div class="paragraph">
+<p>Populates the feedback form and results.</p>
+</div>
+<h4 id="properties-20" class="discrete">Properties</h4>
+<div class="openblock api-object-properties">
+<div class="content">
+<h5 id="site-data-theme-forms-feedback-form-show-name" class="discrete"><code>site.data.theme.forms.feedback-form.show.name</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Feedback, please.</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-forms-feedback-form-show-text" class="discrete"><code>site.data.theme.forms.feedback-form.show.text</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>Did you find this page helpful?</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-forms-feedback-form-show-icon" class="discrete"><code>site.data.theme.forms.feedback-form.show.icon</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>fa fa-clipboard</code></p>
+</td>
+</tr>
+</table>
+</div>
+<h5 id="site-data-theme-forms-feedback-form-send-opts" class="discrete"><code>site.data.theme.forms.feedback-form.send.opts</code></h5>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+usage
+</td>
+<td class="hdlist2">
+<p>Array items are objects that contain:</p>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+<code>slug</code>
+</td>
+<td class="hdlist2">
+<p>Required, value string.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<code>text</code>
+</td>
+<td class="hdlist2">
+<p>Optional, text label to show.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<code>echo</code>
+</td>
+<td class="hdlist2">
+<p>Response to show after this option is selected.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<code>icon</code>
+</td>
+<td class="hdlist2">
+<p>Optional, icon to display for this option.</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+type
+</td>
+<td class="hdlist2">
+<p>Array</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+default
+</td>
+<td class="hdlist2">
+<p><code>{"slug"&#8658;"yes", "text"&#8658;"Yes", "echo"&#8658;"That&#8217;s great! Do let us know if you have more to say.\n", "icon"&#8658;"fa fa-trophy"}{"slug"&#8658;"no", "text"&#8658;"No", "echo"&#8658;"We are sorry to hear that.\n\nMore text\n", "icon"&#8658;"frown-o"}{"slug"&#8658;"some", "text"&#8658;"Partly", "echo"&#8658;"Okay, thanks for your honesty.\n\nMore text\n", "icon"&#8658;"fa fa-line-chart"}</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="gdpr-alert">GDPR Alert</h3>
+<div class="paragraph">
+<p><code class="big">site.data.theme.forms.gdpr-alert</code></p>
+</div>
+<div class="paragraph">
+<p>NOT YET IMPLEMENTED.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row flex topic-footer">
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- feedback form  -->
+
+
+
+
+
+
+
+
+
+<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="jumbotron col-sm-4">
+<i class="icon fa fa-clipboard fa-4x float-right" style="margin-top: .5em;"></i>
+<div class="h5">Feedback, please.</div>
+<p class="feedback--question">Did you find this page helpful?</p>
+<form name="feedback" method="POST" data-netlify="true">
+
+  <button type="button" class="btn btn-sm btn-secondary feedback--answer feedback--answer-yes">Yes</button>
+
+  <button type="button" class="btn btn-sm btn-secondary feedback--answer feedback--answer-no">No</button>
+
+  <button type="button" class="btn btn-sm btn-secondary feedback--answer feedback--answer-some">Partly</button>
+
+</form>
+</div>
+<div class="feedback--response feedback--response-"></div>
+<script>
+  
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  
+  const noButton = document.querySelector('.feedback--answer-no');
+  const noResponse = document.querySelector('.feedback--response-no');
+  
+  const someButton = document.querySelector('.feedback--answer-some');
+  const someResponse = document.querySelector('.feedback--response-some');
+  
+  const disableButtons = () => {
+    
+    yesButton.disabled = true;
+    
+    noButton.disabled = true;
+    
+    someButton.disabled = true;
+    
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  
+  someButton.addEventListener('click', () => {
+    someResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  
+</script>
+
+
+
+
+</div>
+
+          </div>
+        </main>
+
+        <div id="sidebar-right" class="d-none d-xl-block col-xl-2 td-toc d-print-none"><!-- TOPIC/PAGE REF/NAV -->
+          <div class=".sidebar-top">
+            
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+            <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+              
+
+
+
+
+
+
+<!--  -->
+
+<ul id="page-interactions" class="nav flex-column">
+  
+    
+    
+    
+  
+    
+    
+    
+  <li class="nav-item  nav-item-peel">
+    <a href="#" class="nav-link"><i class="icon fa fa-newspaper-o fa-fw"></i> Print-friendly</a>
+  </li>
+      
+  <script>
+      
+    $('.nav-item-peel .nav-link').click(function() {
+      $('#sidebar-left').toggleClass('hide')
+      $('header').toggleClass('hide')
+      $('#sidebar-right').toggleClass('hide')
+      $('footer').toggleClass('hide')
+    });
+      
+  </script>
+    
+  
+    
+    
+    
+  <li class="nav-item  nav-item-edit">
+    <a href="#" class="nav-link"><i class="icon fa fa-pencil-square fa-fw"></i> Edit this topic</a>
+  </li>
+      
+  <script>
+      
+   // TODO: This will get moved into distinct function
+   // with apologies for the bad JS...
+    var feat  = 'edit';
+    if (feat == 'edit') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_config-api_r.adoc";
+    } else if (feat == 'make') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/new/main";
+    } else if (feat == 'data') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_config.yml";
+    } else if (feat == 'open-subj') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/issues/new";
+    } else if (feat == 'open-docs') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/issues/new?labels=documentation";
+    };
+    $('.nav-item-edit .nav-link').each(function() {
+      $(this).attr('href', url);
+    });
+      
+  </script>
+    
+  
+    
+    
+    
+  <li class="nav-item  nav-item-data">
+    <a href="#" class="nav-link"><i class="icon fa fa-database fa-fw"></i> Edit topic datasource</a>
+  </li>
+      
+  <script>
+      
+   // TODO: This will get moved into distinct function
+   // with apologies for the bad JS...
+    var feat  = 'data';
+    if (feat == 'edit') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_config-api_r.adoc";
+    } else if (feat == 'make') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/new/main";
+    } else if (feat == 'data') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_config.yml";
+    } else if (feat == 'open-subj') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/issues/new";
+    } else if (feat == 'open-docs') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/issues/new?labels=documentation";
+    };
+    $('.nav-item-data .nav-link').each(function() {
+      $(this).attr('href', url);
+    });
+      
+  </script>
+    
+  
+    
+    
+    
+  <li class="nav-item  nav-item-make">
+    <a href="#" class="nav-link"><i class="icon fa fa-file-text-o fa-fw"></i> Create a (sub)topic</a>
+  </li>
+      
+  <script>
+      
+   // TODO: This will get moved into distinct function
+   // with apologies for the bad JS...
+    var feat  = 'make';
+    if (feat == 'edit') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_config-api_r.adoc";
+    } else if (feat == 'make') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/new/main";
+    } else if (feat == 'data') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_config.yml";
+    } else if (feat == 'open-subj') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/issues/new";
+    } else if (feat == 'open-docs') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/issues/new?labels=documentation";
+    };
+    $('.nav-item-make .nav-link').each(function() {
+      $(this).attr('href', url);
+    });
+      
+  </script>
+    
+  
+    
+    
+    
+  <li class="nav-item  nav-item-open-docs">
+    <a href="#" class="nav-link"><i class="icon fa fa-ticket fa-fw"></i> Open a docs ticket.</a>
+  </li>
+      
+  <script>
+      
+   // TODO: This will get moved into distinct function
+   // with apologies for the bad JS...
+    var feat  = 'open-docs';
+    if (feat == 'edit') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_config-api_r.adoc";
+    } else if (feat == 'make') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/new/main";
+    } else if (feat == 'data') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_config.yml";
+    } else if (feat == 'open-subj') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/issues/new";
+    } else if (feat == 'open-docs') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/issues/new?labels=documentation";
+    };
+    $('.nav-item-open-docs .nav-link').each(function() {
+      $(this).attr('href', url);
+    });
+      
+  </script>
+    
+  
+    
+    
+    
+  <li class="nav-item  nav-item-open-subj">
+    <a href="#" class="nav-link"><i class="icon fa fa-tag fa-fw"></i> Open a product ticket.</a>
+  </li>
+      
+  <script>
+      
+   // TODO: This will get moved into distinct function
+   // with apologies for the bad JS...
+    var feat  = 'open-subj';
+    if (feat == 'edit') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_config-api_r.adoc";
+    } else if (feat == 'make') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/new/main";
+    } else if (feat == 'data') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_config.yml";
+    } else if (feat == 'open-subj') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/issues/new";
+    } else if (feat == 'open-docs') {
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/issues/new?labels=documentation";
+    };
+    $('.nav-item-open-subj .nav-link').each(function() {
+      $(this).attr('href', url);
+    });
+      
+  </script>
+    
+  
+</ul>
+
+
+
+            </div>
+          </div>
+          <div class=".sidebar-mid">
+            
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+  
+            <nav id="toc-side" data-spy="affix" data-toggle="toc"></nav>
+  
+          </div>
+          <div class="sidebar-end">
+            
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<!-- handler: 1 (theme-skin-amend) -->
+
+    
+<div class="form-group">
+  
+    <label for="theme-skin-amend">
+    
+      <i class="icon fa fa-paint-brush"></i>
+    
+      Theme skin:
+    </label>
+  
+  <select class="form-control" id="theme-skin-amend">
+  
+    
+    
+    
+    <option value="colony">colony</option>
+  
+    
+    
+    
+    <option value="foundation">foundation</option>
+  
+    
+    
+    
+    <option value="foundation-lime">foundation-lime</option>
+  
+    
+    
+    
+    <option value="foundation-potion">foundation-potion</option>
+  
+    
+    
+    
+    <option value="github">github</option>
+  
+    
+    
+    
+    <option value="golo">golo</option>
+  
+    
+    
+    
+    <option value="iconic">iconic</option>
+  
+    
+    
+    
+    <option value="maker">maker</option>
+  
+    
+    
+    
+    <option value="readthedocs">readthedocs</option>
+  
+    
+    
+    
+    <option value="riak">riak</option>
+  
+    
+    
+    
+    <option value="rocket-panda">rocket-panda</option>
+  
+    
+    
+    
+    <option value="rubygems">rubygems</option>
+  
+  </select>
+</div>
+
+  
+
+<script type="text/javascript">
+
+  
+const urlParams = new URLSearchParams(window.location.search);
+
+
+/**
+DOM AMENDER
+**/
+$(function(){
+  $('select#theme-skin-amend').on('change', function () {
+  
+    
+      /**
+      STYLE CHANGER
+      **/
+      var newStyleSheet = '/css/skins/' + $(this).val() + '.css'
+      $('#theme-skin').attr("href", newStyleSheet)
+      $.cookie('theme-skin-amend', $(this).val());
+
+    
+  
+  });
+});
+
+
+/**
+Set value on page load
+Priority order:
+  1. URL query string parameter
+  2. cookie parameter
+  3. default value from `pick:` property
+  4. first option listed
+**/
+$( document ).ready(function() {
+  var nochoice = false;
+  if ( urlParams.has('theme-skin-amend') ) {
+    var val = urlParams.get('theme-skin-amend')
+  } else if ( $.cookie('theme-skin-amend') ) {
+    var val = ($.cookie('theme-skin-amend'))
+  } else if ( 'foundation' != '' ) {
+    var val = "foundation"
+  } else {
+    nochoice = true;
+  }
+  
+    if (nochoice) { var val = $('#theme-skin-amend option:first-child').val() }
+    $('#theme-skin-amend').val(val).change();
+  
+  $.cookie('theme-skin-amend', val);
+});
+
+</script>
+
+  
+
+  
+  
+    
+    
+    
+    
+    
+    
+      
+      
+      
+
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<!-- handler: 2 (syntax-skin-amend) -->
+
+    
+<div class="form-group">
+  
+    <label for="syntax-skin-amend">
+    
+      <i class="icon fa fa-code"></i>
+    
+      Code highlight skin:
+    </label>
+  
+  <select class="form-control" id="syntax-skin-amend">
+  
+    
+    
+    
+    <option value="a11y-dark">a11y-dark</option>
+  
+    
+    
+    
+    <option value="a11y-light">a11y-light</option>
+  
+    
+    
+    
+    <option value="agate">agate</option>
+  
+    
+    
+    
+    <option value="androidstudio">androidstudio</option>
+  
+    
+    
+    
+    <option value="an-old-hope">an-old-hope</option>
+  
+    
+    
+    
+    <option value="arduino-light">arduino-light</option>
+  
+    
+    
+    
+    <option value="arta">arta</option>
+  
+    
+    
+    
+    <option value="ascetic">ascetic</option>
+  
+    
+    
+    
+    <option value="atelier-cave-dark">atelier-cave-dark</option>
+  
+    
+    
+    
+    <option value="atelier-cave-light">atelier-cave-light</option>
+  
+    
+    
+    
+    <option value="atelier-dune-dark">atelier-dune-dark</option>
+  
+    
+    
+    
+    <option value="atelier-dune-light">atelier-dune-light</option>
+  
+    
+    
+    
+    <option value="atelier-estuary-dark">atelier-estuary-dark</option>
+  
+    
+    
+    
+    <option value="atelier-estuary-light">atelier-estuary-light</option>
+  
+    
+    
+    
+    <option value="atelier-forest-dark">atelier-forest-dark</option>
+  
+    
+    
+    
+    <option value="atelier-forest-light">atelier-forest-light</option>
+  
+    
+    
+    
+    <option value="atelier-heath-dark">atelier-heath-dark</option>
+  
+    
+    
+    
+    <option value="atelier-heath-light">atelier-heath-light</option>
+  
+    
+    
+    
+    <option value="atelier-lakeside-dark">atelier-lakeside-dark</option>
+  
+    
+    
+    
+    <option value="atelier-lakeside-light">atelier-lakeside-light</option>
+  
+    
+    
+    
+    <option value="atelier-plateau-dark">atelier-plateau-dark</option>
+  
+    
+    
+    
+    <option value="atelier-plateau-light">atelier-plateau-light</option>
+  
+    
+    
+    
+    <option value="atelier-savanna-dark">atelier-savanna-dark</option>
+  
+    
+    
+    
+    <option value="atelier-savanna-light">atelier-savanna-light</option>
+  
+    
+    
+    
+    <option value="atelier-seaside-dark">atelier-seaside-dark</option>
+  
+    
+    
+    
+    <option value="atelier-seaside-light">atelier-seaside-light</option>
+  
+    
+    
+    
+    <option value="atelier-sulphurpool-dark">atelier-sulphurpool-dark</option>
+  
+    
+    
+    
+    <option value="atelier-sulphurpool-light">atelier-sulphurpool-light</option>
+  
+    
+    
+    
+    <option value="atom-one-dark">atom-one-dark</option>
+  
+    
+    
+    
+    <option value="atom-one-dark-reasonable">atom-one-dark-reasonable</option>
+  
+    
+    
+    
+    <option value="atom-one-light">atom-one-light</option>
+  
+    
+    
+    
+    <option value="brown-paper">brown-paper</option>
+  
+    
+    
+    
+    <option value="codepen-embed">codepen-embed</option>
+  
+    
+    
+    
+    <option value="color-brewer">color-brewer</option>
+  
+    
+    
+    
+    <option value="darcula">darcula</option>
+  
+    
+    
+    
+    <option value="dark">dark</option>
+  
+    
+    
+    
+    <option value="default">default</option>
+  
+    
+    
+    
+    <option value="docco">docco</option>
+  
+    
+    
+    
+    <option value="dracula">dracula</option>
+  
+    
+    
+    
+    <option value="far">far</option>
+  
+    
+    
+    
+    <option value="foundation">foundation</option>
+  
+    
+    
+    
+    <option value="github">github</option>
+  
+    
+    
+    
+    <option value="github-gist">github-gist</option>
+  
+    
+    
+    
+    <option value="gml">gml</option>
+  
+    
+    
+    
+    <option value="googlecode">googlecode</option>
+  
+    
+    
+    
+    <option value="gradient-dark">gradient-dark</option>
+  
+    
+    
+    
+    <option value="gradient-light">gradient-light</option>
+  
+    
+    
+    
+    <option value="grayscale">grayscale</option>
+  
+    
+    
+    
+    <option value="gruvbox-dark">gruvbox-dark</option>
+  
+    
+    
+    
+    <option value="gruvbox-light">gruvbox-light</option>
+  
+    
+    
+    
+    <option value="hopscotch">hopscotch</option>
+  
+    
+    
+    
+    <option value="hybrid">hybrid</option>
+  
+    
+    
+    
+    <option value="idea">idea</option>
+  
+    
+    
+    
+    <option value="ir-black">ir-black</option>
+  
+    
+    
+    
+    <option value="isbl-editor-dark">isbl-editor-dark</option>
+  
+    
+    
+    
+    <option value="isbl-editor-light">isbl-editor-light</option>
+  
+    
+    
+    
+    <option value="kimbie.dark">kimbie.dark</option>
+  
+    
+    
+    
+    <option value="kimbie.light">kimbie.light</option>
+  
+    
+    
+    
+    <option value="lightfair">lightfair</option>
+  
+    
+    
+    
+    <option value="lioshi">lioshi</option>
+  
+    
+    
+    
+    <option value="magula">magula</option>
+  
+    
+    
+    
+    <option value="mono-blue">mono-blue</option>
+  
+    
+    
+    
+    <option value="monokai">monokai</option>
+  
+    
+    
+    
+    <option value="monokai-sublime">monokai-sublime</option>
+  
+    
+    
+    
+    <option value="night-owl">night-owl</option>
+  
+    
+    
+    
+    <option value="nnfx">nnfx</option>
+  
+    
+    
+    
+    <option value="nnfx-dark">nnfx-dark</option>
+  
+    
+    
+    
+    <option value="nord">nord</option>
+  
+    
+    
+    
+    <option value="obsidian">obsidian</option>
+  
+    
+    
+    
+    <option value="ocean">ocean</option>
+  
+    
+    
+    
+    <option value="paraiso-dark">paraiso-dark</option>
+  
+    
+    
+    
+    <option value="paraiso-light">paraiso-light</option>
+  
+    
+    
+    
+    <option value="pojoaque">pojoaque</option>
+  
+    
+    
+    
+    <option value="purebasic">purebasic</option>
+  
+    
+    
+    
+    <option value="qtcreator_dark">qtcreator_dark</option>
+  
+    
+    
+    
+    <option value="qtcreator_light">qtcreator_light</option>
+  
+    
+    
+    
+    <option value="railscasts">railscasts</option>
+  
+    
+    
+    
+    <option value="rainbow">rainbow</option>
+  
+    
+    
+    
+    <option value="routeros">routeros</option>
+  
+    
+    
+    
+    <option value="school-book">school-book</option>
+  
+    
+    
+    
+    <option value="shades-of-purple">shades-of-purple</option>
+  
+    
+    
+    
+    <option value="solarized-dark">solarized-dark</option>
+  
+    
+    
+    
+    <option value="solarized-light">solarized-light</option>
+  
+    
+    
+    
+    <option value="srcery">srcery</option>
+  
+    
+    
+    
+    <option value="stackoverflow-dark">stackoverflow-dark</option>
+  
+    
+    
+    
+    <option value="stackoverflow-light">stackoverflow-light</option>
+  
+    
+    
+    
+    <option value="sunburst">sunburst</option>
+  
+    
+    
+    
+    <option value="tomorrow">tomorrow</option>
+  
+    
+    
+    
+    <option value="tomorrow-night-blue">tomorrow-night-blue</option>
+  
+    
+    
+    
+    <option value="tomorrow-night-bright">tomorrow-night-bright</option>
+  
+    
+    
+    
+    <option value="tomorrow-night">tomorrow-night</option>
+  
+    
+    
+    
+    <option value="tomorrow-night-eighties">tomorrow-night-eighties</option>
+  
+    
+    
+    
+    <option value="vs2015">vs2015</option>
+  
+    
+    
+    
+    <option value="vs">vs</option>
+  
+    
+    
+    
+    <option value="xcode">xcode</option>
+  
+    
+    
+    
+    <option value="xt256">xt256</option>
+  
+    
+    
+    
+    <option value="zenburn">zenburn</option>
+  
+  </select>
+</div>
+
+  
+
+<script type="text/javascript">
+
+
+/**
+DOM AMENDER
+**/
+$(function(){
+  $('select#syntax-skin-amend').on('change', function () {
+  
+    
+      /**
+      STYLE CHANGER
+      **/
+      var newStyleSheet = '/css/syntax/hljs/' + $(this).val() + '.css'
+      $('#syntax-skin').attr("href", newStyleSheet)
+      $.cookie('syntax-skin-amend', $(this).val());
+
+    
+  
+  });
+});
+
+
+/**
+Set value on page load
+Priority order:
+  1. URL query string parameter
+  2. cookie parameter
+  3. default value from `pick:` property
+  4. first option listed
+**/
+$( document ).ready(function() {
+  var nochoice = false;
+  if ( urlParams.has('syntax-skin-amend') ) {
+    var val = urlParams.get('syntax-skin-amend')
+  } else if ( $.cookie('syntax-skin-amend') ) {
+    var val = ($.cookie('syntax-skin-amend'))
+  } else if ( 'a11y-light' != '' ) {
+    var val = "a11y-light"
+  } else {
+    nochoice = true;
+  }
+  
+    if (nochoice) { var val = $('#syntax-skin-amend option:first-child').val() }
+    $('#syntax-skin-amend').val(val).change();
+  
+  $.cookie('syntax-skin-amend', val);
+});
+
+</script>
+
+  
+
+
+
+    
+        </div><!-- /#sidebar-right -->
+
+      </div><!-- /.row.flex-xl-nowrap -->
+    </div><!-- /.td-main -->
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<footer class="row flex-xl-nowrap"><!-- COMPANY REF/NAV -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+  
+        <span class="company-logo">
+          <img src="/images/docops-labs-logo.png" class="logo" width="150px">
+        </span>
+  
+  
+        <div class="footer-title h4">DocOps Labs</div>
+  
+  
+        <div class="footer-title h5">Your HQ for documentation tooling and workflows.</div>
+  
+  
+      </div>
+
+  
+  
+  <div class="col-md-2 offset-2">
+    <ul class="list-unstyled">
+      <li class="footer-heading h5">About</li>
+  
+    
+      <li><a href="/about" data-toggle="tooltip" title="AsciiDocsy Backstory">AsciiDocsy Backstory</a></li>
+  
+    
+      <li><a href="/contributing" data-toggle="tooltip" title="Contributing">Contributing</a></li>
+  
+    
+      <li><a href="/readme" data-toggle="tooltip" title="README">README</a></li>
+  
+    
+      <li><a href="https://github.com/DocOps/asciidocsy-jekyll-theme" data-toggle="tooltip" title="Source">Source</a></li>
+  
+    </ul>
+  </div>
+
+  
+  
+  <div class="col-md-2 ">
+    <ul class="list-unstyled">
+      <li class="footer-heading h5">Resources</li>
+  
+    
+      <li><a href="https://www.codewriting.org" data-toggle="tooltip" title="Codewriting">Codewriting</a></li>
+  
+    
+      <li><a href="https://www.writethedocs.org" data-toggle="tooltip" title="Write the Docs">Write the Docs</a></li>
+  
+    
+      <li><a href="https://asciidoctor.zulipchat.com/login/" data-toggle="tooltip" title="Asciidoctor Chat">Asciidoctor Chat</a></li>
+  
+    </ul>
+  </div>
+
+  
+  
+  <div class="col-md-2 ">
+    <ul class="list-unstyled">
+      <li class="footer-heading h5">Upstream</li>
+  
+    
+      <li><a href="https://www.asciidoctor.org" data-toggle="tooltip" title="THE AsciiDoc markup converter">Asciidoctor</a></li>
+  
+    
+      <li><a href="https://jekyllrb.com" data-toggle="tooltip" title="world-class static-site generator (SSG)">Jekyll</a></li>
+  
+    
+      <li><a href="https://shopify.github.io/liquid/" data-toggle="tooltip" title="Shopify's fierce templating lang & engine">Liquid</a></li>
+  
+    
+      <li><a href="https://getbootstrap.com" data-toggle="tooltip" title="premiere HTML/CSS/JS framework">Bootstrap</a></li>
+  
+    
+      <li><a href="https://jquery.com" data-toggle="tooltip" title="JavaScript framework">jQuery</a></li>
+  
+    
+      <li><a href="https://fontawesome.com" data-toggle="tooltip" title="simple, elegant icons as a typeface">FontAwesome</a></li>
+  
+    </ul>
+  </div>
+
+  </div>
+  
+  <div class="row justify-content-md-center">
+    <div class="footer-strings col-md-8 text-center">
+    
+      <div class="copyright">
+        <p><div class="paragraph">
+<p>&#169; 2021 Copyright Codewriting LLC &amp; upstream authors</p>
+</div></p>
+      </div>
+    
+    
+      <div class="madewith">
+        <p><div class="paragraph">
+<p>Sourced in AsciiDoc and YAML. Generated with Jekyll, Asciidoctor, and AsciiDocsy.</p>
+</div></p>
+      </div>
+    
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+</footer>
+
+
+
+  </div><!-- /.container-fluid.td-outer -->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/tail.js" integrity="" crossorigin="anonymous"></script>
+
+
+<script>
+// invoke anchor.js
+anchors.add('h2,h3,h4,h5');
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
