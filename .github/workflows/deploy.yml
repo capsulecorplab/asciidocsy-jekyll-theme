@@ -20,7 +20,7 @@ jobs:
           args: git submodule update --init --recursive
 
       - name: Build
-        run: bash buildDocs.sh
+        run: cd docs/ && bash buildDocs.sh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -28,4 +28,4 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           # or github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: _site
+          publish_dir: docs/_site
