@@ -25,7 +25,7 @@
 
 <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://asciidocsy.netlify.app/docs/theme/features/frontend" />
+<link rel="canonical" href="https://asciidocsy.netlify.app/docs/theme/config/release-hx" />
 <link rel="shortcut icon" href="/images/favicons/favicon.ico" >
 <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
 <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
@@ -41,18 +41,18 @@
 
 <title>
   
-    AsciiDocsy Frontend Overview |
+    ReleaseHx Product History Feature |
   
   AsciiDocsy
 </title>
 
-<meta property="og:title" content="AsciiDocsy Frontend Overview" />
+<meta property="og:title" content="ReleaseHx Product History Feature" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="" />
 <meta property="og:site_name" content="" />
 
-<meta itemprop="name" content="AsciiDocsy Frontend Overview">
+<meta itemprop="name" content="ReleaseHx Product History Feature">
 <meta itemprop="description" content="">
 
 
@@ -692,8 +692,8 @@ autocomplete('#aa-subject-search-input',
 
 
 
-        <li class="nav-item tier-2 open  active">
-          <a href="/docs/theme/features/frontend" class="nav-link active open">
+        <li class="nav-item tier-2   ">
+          <a href="/docs/theme/features/frontend" class="nav-link  ">
 						Frontend Features Overview
 					</a>
           
@@ -710,8 +710,8 @@ autocomplete('#aa-subject-search-input',
 
 
 
-        <li class="nav-item tier-2  parent ">
-          <a href="/docs/theme/config" class="nav-link  ">
+        <li class="nav-item tier-2 open proud-ancestor ">
+          <a href="/docs/theme/config" class="nav-link  open">
 						Customize the Theme
 					</a>
           
@@ -1087,11 +1087,11 @@ autocomplete('#aa-subject-search-input',
   
     
     
-    / <a href="/docs/theme/features/">Features</a>
+    / <a href="/docs/theme/config/">Configuration</a>
   
 
   
-    / AsciiDocsy Frontend Overview
+    / ReleaseHx Product History Feature
   
 
 </div>
@@ -1105,135 +1105,25 @@ autocomplete('#aa-subject-search-input',
 
 
 
-
-
-  
-  
-  
-  
 
 
   
   
+  
+  
+
+
+  
+  
 
   
   
 
 
 
-<h1>AsciiDocsy Frontend Overview</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1>ReleaseHx Product History Feature</h1>
 <div class="paragraph">
-<p>The AsciiDocsy theme is not exactly groundbreaking in its layout.
-This is by design.</p>
-</div>
-<div class="paragraph">
-<p>There may be some cases when a unique format or layout is called for in documentation, but they are few and far between.
-Users want predictability.
-They want &#8220;intuitive&#8221; layouts where everything is where they expect.</p>
-</div>
-<div class="paragraph">
-<p>In that spirit, AsciiDocsy&#8217;s layout is conventional.
-There are four navigation areas surrounding the content of each page.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="/images/asciidocsy-nav-model.png" alt="asciidocsy nav model">
-</div>
-<div class="title">Figure 1. AsciiDocsy&#8217;s navigation model</div>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s examine these navigation areas more closely.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="site-menus-and-navigation">Site Menus and Navigation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Typically used for sitewide pages or key external links, the <code>#topnav</code> menu can accommodate a layer of nesting, if needed.</p>
-</div>
-<div class="sect2">
-<h3 id="subject-navigation-left">Subject Navigation (Left)</h3>
-<div class="paragraph">
-<p>You are welcome to use the subject menu (<code>#subject-menu</code>) for anything you wish, of course, just as you are welcome to hide it.
-It is set up as generically as possible, with repurposing in mind.</p>
-</div>
-<div class="paragraph">
-<p>That said, <code>#leftbar</code>-situated nav menu is mainly intended to reference either a simple lists of topics within your subject or complex, nested combinations of links to topics and artifacts for a subject or a set of subjects.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The subject menu does not at this time have a way of inferring a menu from the filesystem or even from page metadata (frontmatter).
-While this functionality is possible, I have found it clunkier than centralized &#8220;manifest&#8221; data files that coordinate page and topic metadata.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="page-navigation-right">Page Navigation (Right)</h3>
-<div class="paragraph">
-<p>The right sidebar contains navigation and other features relevant to the current page or topic.</p>
-</div>
-<div class="sect3">
-<h4 id="page-links">Page Links</h4>
-<div class="paragraph">
-<p>Every page with a <code>page</code> or <code>topic</code> layout has a number of optional links to alter the page appearance or submit edits.</p>
-</div>
-<div class="sect4">
-<h5 id="data-edit-link">Data Edit Link</h5>
-<div class="paragraph">
-<p>Since some pages in an AsciiDocsy site can be sourced as data and pressed into rich-text form using Liquid templates, linking to the source data file can be helpful.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="/images/thumb-topic-data-source-edit.png" alt="thumb topic data source edit">
-</div>
-<div class="title">Figure 2. AsciiDocsy lets you link to the AsciiDoc source and the underlying YAML file.</div>
-</div>
-<div class="paragraph">
-<p>See this feature in action in the <a href="/docs/theme/config/api-reference.html">Configuration API Reference</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="topic-toc">Topic TOC</h4>
-<div class="paragraph">
-<p>The topic table-of-contents is generated by Bootstrap&#8217;s scrollspy component.
-The client (browser) renders headers of designated levels into TOC items with anchor links.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This feature does not use AsciiDoc&#8217;s built-in TOC generator, which can still be embedded in the page itself.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The TOC remains in a static position as you scroll the page, tracking your position by highlighting the appropriate item in the TOC.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="company-navigation-bottom">Company Navigation (Bottom)</h3>
-<div class="paragraph">
-<p>The company nav consists of up to five columns of links.
-Link hrefs can draw data from additional sources, as well.</p>
-</div>
-</div>
-</div>
+<p>Documentation slated for 0.2.1.</p>
 </div>
 <div class="row flex topic-footer">
   
@@ -1442,7 +1332,7 @@ Link hrefs can draw data from additional sources, as well.</p>
    // with apologies for the bad JS...
     var feat  = 'edit';
     if (feat == 'edit') {
-      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_frontend-overview.adoc";
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_config-release-hx.adoc";
     } else if (feat == 'make') {
       var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/new/main";
     } else if (feat == 'data') {
@@ -1476,7 +1366,7 @@ Link hrefs can draw data from additional sources, as well.</p>
    // with apologies for the bad JS...
     var feat  = 'make';
     if (feat == 'edit') {
-      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_frontend-overview.adoc";
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_config-release-hx.adoc";
     } else if (feat == 'make') {
       var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/new/main";
     } else if (feat == 'data') {
@@ -1506,7 +1396,7 @@ Link hrefs can draw data from additional sources, as well.</p>
    // with apologies for the bad JS...
     var feat  = 'open-docs';
     if (feat == 'edit') {
-      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_frontend-overview.adoc";
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_config-release-hx.adoc";
     } else if (feat == 'make') {
       var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/new/main";
     } else if (feat == 'data') {
@@ -1536,7 +1426,7 @@ Link hrefs can draw data from additional sources, as well.</p>
    // with apologies for the bad JS...
     var feat  = 'open-subj';
     if (feat == 'edit') {
-      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_frontend-overview.adoc";
+      var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/edit/main/_docs/topics/theme_config-release-hx.adoc";
     } else if (feat == 'make') {
       var url = "https://github.com/DocOps/asciidocsy-jekyll-theme/new/main";
     } else if (feat == 'data') {
