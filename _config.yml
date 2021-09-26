@@ -11,7 +11,7 @@
 # Global custom properties
 title: My AsciiDocsy-based Site
 tagline: A site built with the AsciiDoc-ready Jekyll theme for technical documentation
-deploy_url: https://docs.example.com # your site's URL
+deploy_url: https://capsulecorplab.github.io/asciidocsy-jekyll-theme # your site's URL
 canonical_url: https://docs.example.com # URL of original content
 # DO NOT CHANGE the canonical URL if you deploy a copy the AsciiDocsy site
 # DO change it if you replace all the content or start from scratch
