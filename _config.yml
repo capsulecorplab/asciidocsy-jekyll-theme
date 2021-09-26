@@ -20,7 +20,7 @@ source_git: git@github.com:DocOps/MY-PROJECT.git # git@-formatted address
 source_www: https://github.com/example-account/MY-PROJECT
 
 # Sitewide Jekyll settings
-baseurl: "" # Leave blank if your site will deploy at the root of a domain
+baseurl: /asciidocsy-jekyll-theme # Leave blank if your site will deploy at the root of a domain
             #  such as http://docs.yourcompany.com/
 # The following paths are all relative to the project base
 source: .
